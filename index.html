@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Olympia Gardening, Cleaning & Transportation - Professional Services in Nairobi</title>
-  <meta name="description" content="Olympia Gardening: Transforming spaces into green havens with expert garden design, lawn care, cleaning services, and reliable transportation." />
+  <meta name="description" content="Olympia Gardening: Transforming spaces with expert garden design, lawn care, professional cleaning services, and reliable transportation in Nairobi." />
   <meta name="keywords" content="Olympia gardening, Nairobi landscapers, garden design Kenya, lawn care Nairobi, cleaning services, driver services, car rental" />
   <meta property="og:title" content="Olympia Gardening, Cleaning & Transportation - Professional Services" />
   <meta property="og:description" content="Expert garden design, lawn care, cleaning services, and transportation services in Nairobi" />
@@ -25,7 +25,7 @@
     h1, h2, h3 { font-family: 'Playfair Display', serif; }
     
     .transportation-bg {
-      background-image: url('https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg');
+      background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -59,7 +59,7 @@
     /* Improved hero section for mobile */
     .hero-section {
       min-height: 100vh;
-      background-image: url('https://images.pexels.com/photos/1131458/pexels-photo-1131458.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-image: url('https://images.unsplash.com/photo-1571835782488-178dc5e1c34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -71,6 +71,25 @@
         background-position: 75% center;
       }
     }
+    
+    /* Service card hover effects */
+    .service-card {
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Animation for service icons */
+    .service-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -78,17 +97,17 @@
   <!-- NAVBAR -->
   <header class="bg-white fixed top-0 left-0 w-full shadow z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
-      <a href="#" class="text-2xl font-bold text-green-700"><i class="fas fa-seedling mr-2"></i>Olympia Gardening</a>
-      <nav class="space-x-4 hidden sm:block">
-        <a href="#services" class="text-gray-700 hover:text-green-600">Services</a>
-        <a href="#cleaning" class="text-gray-700 hover:text-green-600">Cleaning</a>
-        <a href="#transportation" class="text-gray-700 hover:text-green-600">Transportation</a>
-        <a href="#about" class="text-gray-700 hover:text-green-600">About</a>
-        <a href="#gallery" class="text-gray-700 hover:text-green-600">Gallery</a>
-        <a href="#testimonials" class="text-gray-700 hover:text-green-600">Testimonials</a>
-        <a href="#contact" class="text-gray-700 hover:text-green-600">Contact</a>
+      <a href="#" class="text-2xl font-bold text-green-700 flex items-center"><i class="fas fa-seedling mr-2"></i>Olympia Services</a>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#services" class="text-gray-700 hover:text-green-600 transition-colors">Gardening</a>
+        <a href="#cleaning" class="text-gray-700 hover:text-green-600 transition-colors">Cleaning</a>
+        <a href="#transportation" class="text-gray-700 hover:text-green-600 transition-colors">Transportation</a>
+        <a href="#about" class="text-gray-700 hover:text-green-600 transition-colors">About</a>
+        <a href="#gallery" class="text-gray-700 hover:text-green-600 transition-colors">Gallery</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-green-600 transition-colors">Testimonials</a>
+        <a href="#contact" class="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
       </nav>
-      <button class="sm:hidden text-2xl text-gray-700 focus:outline-none" id="menuButton" aria-label="Menu">
+      <button class="md:hidden text-2xl text-gray-700 focus:outline-none" id="menuButton" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -98,27 +117,28 @@
       <button id="closeMenu" class="absolute top-4 right-4 text-3xl text-gray-700 focus:outline-none" aria-label="Close menu">
         <i class="fas fa-times"></i>
       </button>
-      <a href="#services" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Services</a>
-      <a href="#cleaning" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Cleaning</a>
-      <a href="#transportation" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Transportation</a>
-      <a href="#about" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">About</a>
-      <a href="#gallery" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Gallery</a>
-      <a href="#testimonials" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Testimonials</a>
-      <a href="#contact" class="hover:text-green-600" onclick="mobileMenu.classList.add('hidden')">Contact</a>
+      <a href="#services" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Gardening</a>
+      <a href="#cleaning" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Cleaning</a>
+      <a href="#transportation" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Transportation</a>
+      <a href="#about" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">About</a>
+      <a href="#gallery" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Gallery</a>
+      <a href="#testimonials" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Testimonials</a>
+      <a href="#contact" class="hover:text-green-600 transition-colors" onclick="closeMobileMenu()">Contact</a>
     </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="relative text-white min-h-screen flex items-center justify-center pt-16 pb-16 overflow-hidden hero-section">
     <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
-    <div class="relative z-10 text-center px-4" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Olympia Gardening</h1>
-      <p class="text-lg md:text-2xl mb-6 drop-shadow-lg">Transforming spaces into green havens 🌿</p>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Olympia Services</h1>
+      <p class="text-lg md:text-2xl mb-6 drop-shadow-lg">Professional Gardening, Cleaning & Transportation Services in Nairobi</p>
+      <p class="text-xl mb-8 drop-shadow-lg max-w-2xl mx-auto">Transforming your spaces and simplifying your life with our expert services</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="#services" class="bg-white text-green-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
           <i class="fas fa-leaf"></i> Explore Services
         </a>
-        <a href="https://wa.me/254700000000" class="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        <a href="https://wa.me/254729028145" class="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
       </div>
@@ -132,34 +152,46 @@
       <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
         We bring your dream garden to life with expert care, creativity, and passion. Explore what we can do for you!
       </p>
-      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up">
-          <i class="fas fa-mower text-green-600 text-5xl mb-4"></i>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-mower"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Lawn Care</h3>
           <p class="text-gray-600">Keep your lawn lush, green, and healthy with expert mowing, edging, and fertilization.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-palette text-green-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-palette"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Garden Design</h3>
           <p class="text-gray-600">Tailored garden layouts with a creative touch, perfectly suited to your space and taste.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-seedling text-green-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-seedling"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Plant Installation</h3>
           <p class="text-gray-600">We select, deliver, and plant the perfect greenery to bring your vision to life.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-water text-green-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-water"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Irrigation Systems</h3>
           <p class="text-gray-600">Efficient watering solutions to keep your plants thriving, rain or shine.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="400">
-          <i class="fas fa-bug text-green-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-bug"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Pest Control</h3>
           <p class="text-gray-600">Eco-friendly pest solutions to protect your garden and promote healthy growth.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-recycle text-green-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-green-400" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon text-green-600 text-5xl mb-4">
+            <i class="fas fa-recycle"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-green-700">Garden Maintenance</h3>
           <p class="text-gray-600">Regular care to keep your garden looking its best, season after season.</p>
         </div>
@@ -170,38 +202,50 @@
   <!-- CLEANING SERVICES -->
   <section id="cleaning" class="py-20 px-4 bg-blue-50">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-4 text-blue-800" data-aos="fade-up">Cleaning Services</h2>
+      <h2 class="text-4xl font-bold mb-4 text-blue-800" data-aos="fade-up">Professional Cleaning Services</h2>
       <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        Professional cleaning services to keep your home or office sparkling clean and hygienic.
+        We provide thorough cleaning solutions for homes and offices, ensuring a spotless and hygienic environment.
       </p>
-      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up">
-          <i class="fas fa-home text-blue-600 text-5xl mb-4"></i>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-home"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-blue-700">Residential Cleaning</h3>
           <p class="text-gray-600">Thorough cleaning of homes, apartments, and residential spaces to keep your living environment fresh.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-building text-blue-600 text-5xl mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Commercial Cleaning</h3>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Office Cleaning</h3>
           <p class="text-gray-600">Professional office and commercial space cleaning to maintain a productive work environment.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-broom text-blue-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-broom"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-blue-700">Deep Cleaning</h3>
           <p class="text-gray-600">Comprehensive deep cleaning services for move-in/move-out or seasonal refresh of your space.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-couch text-blue-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-couch"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-blue-700">Carpet & Upholstery</h3>
           <p class="text-gray-600">Professional cleaning of carpets, rugs, and furniture to remove stains and allergens.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="400">
-          <i class="fas fa-window-restore text-blue-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-window-restore"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-blue-700">Window Cleaning</h3>
           <p class="text-gray-600">Crystal clear window cleaning for improved natural light and a brighter interior.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-calendar-alt text-blue-600 text-5xl mb-4"></i>
+        <div class="bg-white rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-400" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon text-blue-600 text-5xl mb-4">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2 text-blue-700">Regular Maintenance</h3>
           <p class="text-gray-600">Scheduled cleaning services to maintain cleanliness and hygiene on a weekly or monthly basis.</p>
         </div>
@@ -210,25 +254,31 @@
   </section>
 
   <!-- TRANSPORTATION SERVICES -->
-  <section id="transportation" class="py-20 px-4 bg-blue-600 text-white">
+  <section id="transportation" class="py-20 px-4 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Transportation Services</h2>
       <p class="text-lg mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
         Reliable transportation solutions for all your needs in Nairobi and beyond.
       </p>
-      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-300" data-aos="fade-up">
-          <i class="fas fa-car text-blue-300 text-5xl mb-4"></i>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-300" data-aos="fade-up">
+          <div class="service-icon text-blue-300 text-5xl mb-4">
+            <i class="fas fa-car"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2">Private Driver Hire</h3>
           <p>Professional drivers available for hourly, daily, or weekly hire for your personal or business needs.</p>
         </div>
-        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-300" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-car-side text-blue-300 text-5xl mb-4"></i>
+        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon text-blue-300 text-5xl mb-4">
+            <i class="fas fa-car-side"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2">Car Rental Services</h3>
           <p>Well-maintained vehicles available for rent with or without a driver for your convenience.</p>
         </div>
-        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition transform duration-300 ease-in-out border-t-4 border-blue-300" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-road text-blue-300 text-5xl mb-4"></i>
+        <div class="bg-white bg-opacity-10 rounded-2xl shadow-lg p-8 service-card border-t-4 border-blue-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon text-blue-300 text-5xl mb-4">
+            <i class="fas fa-road"></i>
+          </div>
           <h3 class="text-xl font-semibold mb-2">Long Distance Driving</h3>
           <p>Experienced drivers for intercity travel and long-distance journeys across Kenya.</p>
         </div>
@@ -240,18 +290,18 @@
   <section id="about" class="bg-white py-20 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
       <div class="md:w-1/2" data-aos="fade-right">
-        <img src="https://images.pexels.com/photos/5808941/pexels-photo-5808941.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gardening team" class="rounded-xl shadow-xl hover:scale-105 transition transform duration-300 ease-in-out w-full" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional team" class="rounded-xl shadow-xl hover:scale-105 transition transform duration-300 ease-in-out w-full" loading="lazy">
       </div>
       <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left">
-        <h2 class="text-4xl font-bold mb-4">About Us</h2>
+        <h2 class="text-4xl font-bold mb-4">About Olympia Services</h2>
         <p class="text-gray-700 text-lg mb-6">
-          At Olympia Gardening, we believe every space deserves a touch of green. From balconies to estates, we bring lush life wherever we go.
+          At Olympia Services, we believe in providing comprehensive solutions to make your life easier and your spaces more beautiful. From lush gardens to spotless interiors and reliable transportation, we've got you covered.
         </p>
         <p class="text-gray-700 text-lg mb-6">
-          Founded in Nairobi with a passion for transforming outdoor spaces, our team brings over 10 years of experience to every project. We've expanded our services to include professional cleaning and reliable transportation solutions to serve all your needs.
+          Founded in Nairobi with a passion for excellence, our team brings years of experience across gardening, cleaning, and transportation services. We take pride in our attention to detail and commitment to customer satisfaction.
         </p>
         <div class="flex flex-wrap justify-center md:justify-start gap-4">
-          <a href="https://wa.me/254700000000" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-700 transition">
+          <a href="https://wa.me/254729028145" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-700 transition">
             <i class="fab fa-whatsapp"></i> Chat Now
           </a>
           <a href="#testimonials" class="inline-block border border-green-600 text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-50 transition">
@@ -267,23 +317,23 @@
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Our Work</h2>
       <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 px-4">
-        <a href="https://images.pexels.com/photos/1176081/pexels-photo-1176081.jpeg" data-lightbox="gallery" data-title="Professional Garden Maintenance">
-          <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gardener trimming bushes" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in">
+        <a href="https://images.unsplash.com/photo-1571835782488-178dc5e1c34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Beautiful Garden Design">
+          <img src="https://images.unsplash.com/photo-1571835782488-178dc5e1c34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Beautiful garden design" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in">
         </a>
-        <a href="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg" data-lightbox="gallery" data-title="Perfectly Maintained Lawn">
-          <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Green lush lawn" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="100">
+        <a href="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Professional Office Cleaning">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Clean office space" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="100">
         </a>
-        <a href="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg" data-lightbox="gallery" data-title="Beautiful Flower Garden">
-          <img src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Colorful flower garden" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Reliable Transportation">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Professional driver" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="200">
         </a>
-        <a href="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg" data-lightbox="gallery" data-title="Elegant Garden Design">
-          <img src="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Designed garden pathway" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="300">
+        <a href="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Lawn Maintenance">
+          <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Lawn maintenance" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="300">
         </a>
-        <a href="https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg" data-lightbox="gallery" data-title="Efficient Irrigation System">
-          <img src="https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden sprinkler system" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="400">
+        <a href="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Residential Cleaning">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Clean home" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="400">
         </a>
-        <a href="https://images.pexels.com/photos/213217/pexels-photo-213217.jpeg" data-lightbox="gallery" data-title="Complete Garden Makeover">
-          <img src="https://images.pexels.com/photos/7283/garden.jpg" alt="Before and after garden transformation" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="500">
+        <a href="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" data-lightbox="gallery" data-title="Luxury Car Service">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Luxury car" class="rounded-lg shadow-lg hover:scale-105 transition transform duration-300 ease-in-out w-full h-64 object-cover" loading="lazy" data-aos="zoom-in" data-aos-delay="500">
         </a>
       </div>
     </div>
@@ -330,7 +380,7 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
           </div>
-          <p class="italic text-lg">"Our lawn has never looked better since we started using their maintenance services. Very responsive team."</p>
+          <p class="italic text-lg">"The driver services are reliable and professional. I use them for all my business trips around Nairobi."</p>
           <span class="block mt-2 font-semibold">— Wanjiku N., Nairobi</span>
         </blockquote>
       </div>
@@ -343,106 +393,16 @@
       <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
       <div class="bg-white rounded-xl shadow-lg p-8 text-gray-800 max-w-md mx-auto" data-aos="zoom-in">
         <h3 class="text-xl font-semibold mb-4 text-green-700">Contact Information</h3>
-        <div class="space-y-4 mb-6">
-          <p><i class="fas fa-envelope mr-2 text-green-600"></i> <a href="mailto:owner@olympiagardening.com" class="hover:underline">owner@olympiagardening.com</a></p>
-          <p><i class="fas fa-phone mr-2 text-green-600"></i> <a href="tel:+254700000000" class="hover:underline">+254 700 000 000</a></p>
-          <p><i class="fas fa-map-marker-alt mr-2 text-green-600"></i> Nairobi, Kenya</p>
+        <div class="space-y-4 mb-6 text-left">
+          <p class="flex items-start"><i class="fas fa-envelope mr-2 text-green-600 mt-1"></i> <a href="mailto:simonmuturi883@gmail.com" class="hover:underline">simonmuturi883@gmail.com</a></p>
+          <p class="flex items-start"><i class="fas fa-phone mr-2 text-green-600 mt-1"></i> <a href="tel:+254102604090" class="hover:underline">0102 604 090 (Airtel)</a></p>
+          <p class="flex items-start"><i class="fas fa-phone mr-2 text-green-600 mt-1"></i> <a href="tel:+254729028145" class="hover:underline">0729 028 145 (Safaricom)</a></p>
+          <p class="flex items-start"><i class="fas fa-map-marker-alt mr-2 text-green-600 mt-1"></i> Nairobi, Kenya</p>
         </div>
-        <a href="https://wa.me/254700000000" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-700 transition w-full">
+        <a href="https://wa.me/254729028145" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-700 transition w-full mb-4">
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
-        <div class="flex justify-center space-x-6 mt-6 text-2xl text-green-600">
-          <a href="#" class="hover:text-green-800"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-green-800"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-green-800"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/254700000000" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 transition transform hover:scale-110 flex items-center justify-center w-14 h-14">
-    <i class="fab fa-whatsapp text-2xl"></i>
-  </a>
-
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-8 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <div class="mb-6">
-        <a href="#" class="text-2xl font-bold text-green-500"><i class="fas fa-seedling"></i> Olympia Gardening</a>
-        <p class="mt-2">Transforming outdoor spaces and providing reliable cleaning and transportation in Nairobi</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-6 mb-6">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#cleaning" class="hover:text-white">Cleaning</a>
-        <a href="#transportation" class="hover:text-white">Transportation</a>
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#gallery" class="hover:text-white">Gallery</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </div>
-      <div class="border-t border-gray-800 pt-6">
-        &copy; 2025 Olympia Gardening. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true
-    });
-
-    // Mobile menu toggle
-    const menuButton = document.getElementById('menuButton');
-    const closeMenu = document.getElementById('closeMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    });
-    
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      document.body.style.overflow = '';
-    });
-
-    // Close mobile menu when clicking on links
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Back to top button functionality
-    const backToTopButton = document.getElementById("backToTop");
-    
-    // Show button when scrolling down
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    });
-    
-    // Scroll to top when clicked
-    backToTopButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  </script>
-</body>
-</html>
+        <a href="tel:+254729028145" class="inline-block border border-green-600 text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-50 transition w-full">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <div class="flex justify-center space-x-6 mt-6 text-2
