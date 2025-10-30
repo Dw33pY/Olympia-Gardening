@@ -405,4 +405,105 @@
         <a href="tel:+254729028145" class="inline-block border border-green-600 text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-50 transition w-full">
           <i class="fas fa-phone"></i> Call Now
         </a>
-        <div class="flex justify-center space-x-6 mt-6 text-2
+        <div class="flex justify-center space-x-6 mt-6 text-2xl text-green-600">
+          <a href="#" class="hover:text-green-800"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-green-800"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-green-800"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/254729028145" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 transition transform hover:scale-110 flex items-center justify-center w-14 h-14">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="mb-6">
+        <a href="#" class="text-2xl font-bold text-green-500 flex items-center justify-center"><i class="fas fa-seedling mr-2"></i> Olympia Services</a>
+        <p class="mt-2">Professional Gardening, Cleaning & Transportation Services in Nairobi</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 mb-6">
+        <a href="#services" class="hover:text-white transition-colors">Gardening</a>
+        <a href="#cleaning" class="hover:text-white transition-colors">Cleaning</a>
+        <a href="#transportation" class="hover:text-white transition-colors">Transportation</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <div class="border-t border-gray-800 pt-6">
+        &copy; 2025 Olympia Services. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Mobile menu toggle
+    const menuButton = document.getElementById('menuButton');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById("backToTop");
+    
+    // Show button when scrolling down
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+    
+    // Scroll to top when clicked
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    // Lightbox configuration
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'imageFadeDuration': 300,
+      'positionFromTop': 100
+    });
+  </script>
+</body>
+</html>
